@@ -37,28 +37,36 @@ class _HomePageState extends State<HomePage> {
       appBar: const NavBar(),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
+          final Size screenSize = MediaQuery.of(context).size;
           final bool isMobile = constraints.maxWidth < 700;
-          final bool isTablet = constraints.maxWidth >= 700 && constraints.maxWidth < 1100;
+          final bool isTablet =
+              constraints.maxWidth >= 700 && constraints.maxWidth < 1100;
+
+          final double horizontalPadding = isMobile ? 20 : 40;
+          final double verticalPadding = screenSize.height < 700 ? 32 : 48;
+          final double maxContentWidth =
+              screenSize.width < 1300 ? screenSize.width : 1200;
 
           return SingleChildScrollView(
             child: Center(
               child: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 1200),
+                constraints: BoxConstraints(maxWidth: maxContentWidth),
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                    horizontal: isMobile ? 20 : 40,
-                    vertical: isMobile ? 32 : 48,
+                    horizontal: horizontalPadding,
+                    vertical: verticalPadding,
                   ),
                   child: Column(
-                    crossAxisAlignment:
-                        isMobile ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+                    crossAxisAlignment: isMobile
+                        ? CrossAxisAlignment.start
+                        : CrossAxisAlignment.center,
                     children: <Widget>[
                       _buildHeroSection(context, isMobile),
-                      const SizedBox(height: 40),
+                      SizedBox(height: isMobile ? 32 : 40),
                       _buildImageGrid(isMobile: isMobile, isTablet: isTablet),
-                      const SizedBox(height: 48),
+                      SizedBox(height: isMobile ? 40 : 48),
                       _buildSignupForm(isMobile),
-                      const SizedBox(height: 64),
+                      SizedBox(height: isMobile ? 48 : 64),
                       const Footer(),
                     ],
                   ),
@@ -133,7 +141,7 @@ class _HomePageState extends State<HomePage> {
         : isTablet
             ? 3
             : 4;
-    final double spacing = 16;
+    const double spacing = 16;
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
