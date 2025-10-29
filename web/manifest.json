@@ -1,0 +1,10 @@
+{
+  "name": "ZoneDojo",
+  "short_name": "ZoneDojo",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ea4335",
+  "description": "ZoneDojo giveaway landing experience",
+  "icons": []
+}

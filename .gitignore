@@ -1,0 +1,24 @@
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+flutter_*.png
+linked_bundle.zip
+app.*.symbols
+app.*.map.json
+*.lock
+
+# IDE related
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.DS_Store
+
+# Generated plugin files
+ios/Runner/GeneratedPluginRegistrant.*
+android/app/src/*/GeneratedPluginRegistrant.*
