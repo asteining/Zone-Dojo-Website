@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="ZoneDojo giveaway landing experience" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZoneDojo</title>
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      const serviceWorkerVersion = null;
+    </script>
+    <script defer src="flutter.js"></script>
+  </head>
+  <body>
+    <script>
+      window.addEventListener('load', function () {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('flutter_service_worker.js');
+        }
+      });
+    </script>
+    <script defer src="main.dart.js"></script>
+  </body>
+</html>
