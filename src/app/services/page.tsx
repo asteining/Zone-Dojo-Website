@@ -60,16 +60,10 @@ export default function ServicesPage() {
     <div className="mx-auto max-w-6xl px-4 py-16 text-white">
       {/* HERO */}
       <section className="max-w-3xl">
-        <h1 className="text-4xl font-extrabold tracking-tight text-white">
+        <h1 className="text-4xl font-extrabold tracking-tight text-red-500">
           You shoot. <span className="text-red-500">We edit.</span>
         </h1>
-        <p className="mt-4 text-lg text-zinc-300">
-          Shorts, long-form, thumbnails, channel identity.
-          We make you look like you’ve already blown up.
-        </p>
-        <p className="mt-2 text-sm text-zinc-500">
-          Fast turnaround. Creator energy. No corporate beige.
-        </p>
+       
       </section>
 
       {/* SERVICES GRID */}
@@ -77,15 +71,15 @@ export default function ServicesPage() {
         {[
           {
             title: "Short-Form Editing",
-            desc: "TikTok / Reels / Shorts. Hook in 0.5s. Captions that slap. No dead air.",
+            desc: "TikTok / Reels / Shorts",
           },
           {
             title: "YouTube Long-Form",
-            desc: "Full video structure, pacing, storytelling, retention-engineered intros.",
+            desc: "Full video structure, pacing, and storytelling",
           },
           {
             title: "Brand & Thumbnails",
-            desc: "Titles, thumbnails, on-screen text identity. Make people recognize you in 1 frame.",
+            desc: "Titles, thumbnails, and on-screen text identity",
           },
         ].map((card) => (
           <div
@@ -114,11 +108,11 @@ export default function ServicesPage() {
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
             <label className="mb-1 block text-xs font-medium text-zinc-300">
-              Your name (required)
+              Your full name (required)
             </label>
             <input
               className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-3 py-2 text-sm text-white outline-none placeholder-zinc-500 focus:border-red-500 focus:ring-1 focus:ring-red-500"
-              placeholder="AJ / Chris / etc."
+              placeholder="John Smith / Adam Murphy / etc."
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
