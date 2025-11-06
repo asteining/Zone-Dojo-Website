@@ -3,7 +3,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-4xl px-4 py-16 text-white">
         <div className="mb-10">
           <h1 className="text-4xl font-extrabold tracking-tight text-white">
-            What is <span className="text-red-500">ZoneDojo</span>?
+            <span className="text-red-500">ZoneDojo</span>?
           </h1>
           <p className="mt-4 text-zinc-300 text-lg">
             ZoneDojo is a creator dojo. We take raw energy, rough clips,
